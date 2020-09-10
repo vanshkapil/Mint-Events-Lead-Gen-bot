@@ -58,7 +58,7 @@ responses:
   - text: Before we move forward, please share your mobile number
   utter_corporate_ack:
   - image: https://minteventz.com/wp-content/uploads/2020/02/image_2020_02_05T22_18_58_965Z.png
-    text: "Alright. \n\n Mint Eventz Company offers the most exotic locales and destinations\
+    text: " Mint Eventz Company offers the most exotic locales and destinations\
       \ for MICE events. Inland domestic destinations to the most exotic foreign locations\
       \ Mint Eventz Company offers End-2-End solutions."
   utter_default:
