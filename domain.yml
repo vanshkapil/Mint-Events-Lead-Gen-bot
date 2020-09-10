@@ -1,0 +1,106 @@
+actions:
+- action_eventwelcome
+- respond_chitchat
+- utter_ask_visitor_email
+- utter_ask_visitor_event_type
+- utter_ask_visitor_name
+- utter_ask_visitor_phone_number
+- utter_corporate_ack
+- utter_default
+- utter_exhibitions_ack
+- utter_goodbye
+- utter_greet
+- utter_iamabot
+- utter_ok
+- utter_request_question
+- utter_wedding_ack
+- utter_wrong_phone_number
+- utter_wrong_visitor_email
+entities:
+- entity
+- value
+- visitor_email
+- visitor_event_type
+- visitor_name
+- visitor_phone_number
+forms:
+- visitor_form
+intents:
+- start
+- chitchat
+- inform
+- exhibitions
+- greet
+- goodbye
+- affirm
+- deny
+- filler
+- out_of_scope
+- bot_challenge
+- weddings
+- corporate
+responses:
+  utter_ask_visitor_email:
+  - text: and your email id
+  utter_ask_visitor_event_type:
+  - buttons:
+    - payload: /weddings{"visitor_event_type":"weddings"}
+      title: Weddings & Personal Events
+    - payload: /corporate{"visitor_event_type":"corporate"}
+      title: Corporate Events
+    - payload: /exhibitions{"visitor_event_type":"exhibitions"}
+      title: Exhibitions
+    text: " Ok {visitor_name}, \n\n Please tell me how may I help you? We have expertise\
+      \ in "
+  utter_ask_visitor_name:
+  - text: May I ask what's your name?
+  utter_ask_visitor_phone_number:
+  - text: Before we move forward, please share your mobile number
+  utter_corporate_ack:
+  - image: https://minteventz.com/wp-content/uploads/2020/02/image_2020_02_05T22_18_58_965Z.png
+    text: "Alright. \n\n Mint Eventz Company offers the most exotic locales and destinations\
+      \ for MICE events. Inland domestic destinations to the most exotic foreign locations\
+      \ Mint Eventz Company offers End-2-End solutions."
+  utter_default:
+  - text: Sorry, I did not understand that.
+  utter_exhibitions_ack:
+  - image: https://minteventz.com/wp-content/uploads/2020/02/man-beside-flat-screen-television-with-photos-background-716276-copy.jpg
+    text: 'Mint Eventz’s vision is of organizing exhibition is We are in the business
+      where you do the business! '
+  utter_goodbye:
+  - text: Bye
+  utter_greet:
+  - image: https://minteventz.com/wp-content/uploads/2020/01/logo.png
+    text: "Hi, Welcome to Mint Eventz Company. \n\n We are India's premiere event\
+      \ management company."
+  utter_iamabot:
+  - text: Hey, I am just a bot
+  utter_ok:
+  - text: okay
+  - text: hmm
+  - text: alright
+  utter_request_question:
+  - text: Please ask if you have any specific questions
+  utter_wedding_ack:
+  - image: https://youtu.be/WFd3XLkXY_c
+    text: "Wonderful, you came to the right place. We integrate Indian traditions\
+      \ with modern flavours. \n\n Check out this quick video "
+  utter_wrong_phone_number:
+  - text: This phone number is invalid. Please enter a 10 digit number without country
+      code and spaces. (for eg 9563839843)
+  utter_wrong_visitor_email:
+  - text: This email is invalid. Please retry.
+session_config:
+  carry_over_slots_to_new_session: true
+  session_expiration_time: 60
+slots:
+  requested_slot:
+    type: unfeaturized
+  visitor_email:
+    type: unfeaturized
+  visitor_event_type:
+    type: unfeaturized
+  visitor_name:
+    type: text
+  visitor_phone_number:
+    type: unfeaturized

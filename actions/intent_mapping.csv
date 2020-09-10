@@ -1,0 +1,13 @@
+intent,button,entities
+start,start conversation,
+inform,Tell me something,
+goodbye,Goodbye ,
+greet,Hello,
+affirm,Yes,
+deny,No,
+bot_challenge,If I am a bot,
+weddings,know about wedding & personal event planning,
+corporate,know about corporate events,
+exhibitions,know about exhibition organisation,
+out_of_scope,To say something strange,
+filler,To say ok,
